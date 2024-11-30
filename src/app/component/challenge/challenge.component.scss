@@ -1,0 +1,284 @@
+.container{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+   
+
+    .souscont{
+        display: flex;
+        width: 60rem;
+        height: 80%;
+        background-color: rgb(255, 255, 255);
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        .sous{
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    .right{
+        width: 450px;
+        height: 400px;
+        background-color: black;
+        border-radius: 10px;
+        transition: all .2s ease-in-out;
+        position: relative;
+        left: 20px;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        img{
+            width: 430px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            position: relative;
+            left: 20px;
+
+        }
+        .img1{
+            animation: stan 5s linear forwards;
+            transition: all 1s linear forwards;
+        }
+        .img2{
+            position: relative;
+            bottom: 402px;
+            animation: stan1 4s linear forwards;
+        }
+    }
+
+    .left{
+        width: 450px;
+        position: relative;
+        left: 50px;
+
+        h4{
+            font-size: 45px;
+            font-weight: bold;
+            color: rgb(42, 41, 41);
+            position: relative;
+            bottom: 34px;
+        }
+    }
+
+    .fit{
+        display: flex;
+        justify-content: space-between;
+
+        .span1{
+            background-color: rgb(42, 41, 41);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            width: 55px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .span2{
+            color: rgb(66, 65, 65);
+            position: relative;
+            right: 80px;
+        }
+    }
+    .etoile-container{
+        position: relative;
+        bottom: 90px;
+        display: flex;
+        gap: 10px;
+        font-size: 15px;
+
+        .etoile{
+            i{
+                color: gold;
+                cursor: pointer;
+            }
+        }
+        .note{
+            color: rgb(87, 87, 87);
+        }
+    }
+    .prix-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        bottom: 50px;
+
+        .prixold{
+            color: rgb(127, 127, 127);
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+        .prix{
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(42, 41, 41);
+            cursor: pointer;
+        }
+    }
+    .btn-container{
+        display: flex;
+        gap: 20px;
+        position: relative;
+        bottom: 0px;
+
+        .btn{
+            background-color: rgb(0, 183, 255);
+            color: white;
+            padding: 13px 50px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                background-color: rgb(0, 165, 255);
+                transform: scale(1.1);
+            }
+        }
+
+        .aimer{
+            background-color: rgba(0, 183, 255, 0.68);
+            width: 40px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 64, 255);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                background-color: rgba(0, 165, 255, 0.68);
+                transform: scale(1.1);
+            }
+
+            i{
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    rotate: 360deg;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    @keyframes stan{
+        0%{
+           visibility:  hidden;
+        }
+        50%{
+            visibility: hidden;
+        }
+        80%{
+            visibility: hidden;
+        }
+        100%{
+            visibility: visible;
+
+        }
+    }
+    @keyframes stan1{
+        0%{
+           rotate: 90deg;
+        }
+        50%{
+            rotate: -180deg;
+        }
+        75%{
+            rotate: -270deg;
+        }
+        100%{
+           rotate:-360deg;
+        }
+    }
+}
+@media (max-width: 600px){
+    .container{
+        position: relative;
+        bottom: 50px;
+
+
+        .souscont{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+
+            h4{
+                font-size: 20px;
+                position: relative;
+                top: 180px;
+                right: 150px;
+            }
+            .right{
+                width: 350px;
+                height: 300px;
+                position: relative;
+                left: 240px;
+                bottom: 80px;
+
+                img{
+                    width: 300px;
+                    height: 300px;
+                }
+                .img2{
+                   position: relative;
+                   bottom: 304px;
+                }
+            }
+
+            .left{
+
+                .fit{
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+    .prix-container{
+        position: relative;
+        top: 120px;
+        left: 30px;
+        
+
+        .prixold{
+            font-size: 12px;
+            position: relative;
+            top: 15px;
+        }
+    }
+    .btn-container{
+        position: relative;
+        top: 130px;
+        right: 150px;
+    }
+    .etoile-container{
+        position: relative;
+        top: 180px;
+        right: 150px;
+    }
+}
+@media (max-width:360px){
+    .btn-container{
+        position: relative;
+        top: 130px;
+        right: 170px;
+    }
+    .right{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        left: 230px;
+        bottom: 80px;
+    }
+}
