@@ -160,13 +160,15 @@
             &:hover{
                 background-color: rgba(0, 165, 255, 0.68);
                 transform: scale(1.1);
+                rotate: 90deg;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);;
             }
 
             i{
                 transition: all 0.3s ease-in-out;
 
                 &:hover{
-                    rotate: 360deg;
+                    rotate: 270deg;
                     transform: scale(1.2);
                 }
             }

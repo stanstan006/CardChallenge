@@ -2,7 +2,7 @@
     <div class="souscont">
        <div class="sous">
         <div class="right">
-            <img class="img1" src="../../../assets/defi.jpeg" alt="">
+            <img class="img1" src="../../../assets/defi.jpeg">
             <img class="img2" src="../../../assets/defisans.png">
         </div>
         <div class="left">
@@ -27,9 +27,9 @@
             </div>
             <div class="btn-container">
                 <button class="btn">Ajouter au panier</button>
-                <div class="aimer" (click)="toggleHeart()">
-                    <i class="fa-regular fa-heart" *ngIf="heart==1"></i>
-                    <i class="fa-solid fa-heart" *ngIf="heart==2"></i>
+                <div class="aimer">
+                    <i class="fa-regular fa-heart" *ngIf="heart==1" (click)="toggleHeart()"></i>
+                    <i class="fa-solid fa-heart" *ngIf="heart==2" (click)="toggleHeart()"></i>
                 </div>
             </div>
         </div>
